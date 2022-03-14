@@ -1,9 +1,6 @@
 
 \ examplez
 
-: print cr type cr ;
-: then; postpone EXIT postpone then ; immediate
-
 s" Key" constant KEY
 
 variable held-item

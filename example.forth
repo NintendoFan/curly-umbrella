@@ -1,4 +1,5 @@
 
+include base.forth
 \ examplez
 
 s" Key" constant KEY

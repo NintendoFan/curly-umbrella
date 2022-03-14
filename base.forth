@@ -11,9 +11,12 @@
 
 # now some basic useful stuff
 
-: var variable ;
-: print . cr ;
+: var variable ; : const constant ;
+: print cr type cr ;
 : ? @ print ;
-: nip swap drop ;
-: -rot rot rot ;
-: +! dup @ rot + swap ! ;
+
+# exit early from a definition and return to where word was called from
+: then; postpone EXIT postpone then ; immediate
+
+# if true, exit early
+: if; postpone if postpone then; ;
